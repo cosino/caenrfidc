@@ -8,11 +8,6 @@
 
 #include "client.h"
 
-/* Command line options */
-struct options_s {
-        unsigned int quite:1;
-} option;
-
 int fd = STDOUT_FILENO;
 unsigned short session_id;
 unsigned short replay_id;
@@ -80,7 +75,6 @@ static void usage(void)
 {
         fprintf(stderr, "usage: %s [<options>]\n", NAME);
         fprintf(stderr, "   where <options> are:\n");
-        fprintf(stderr, "      [-q | --quite]         : don't be verbose\n");
         fprintf(stderr, "      [-h | --help]          : show this help\n");
 
         exit(EXIT_FAILURE);

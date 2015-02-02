@@ -17,12 +17,12 @@ BEGIN {
 }
 
 # Skip comments
-/^[[:space:]]*#.*$/ {
+/^[:space:]*#.*$/ {
 	next
 }
 
 # Skip blank lines
-/^[[:space:]]*$/ {
+/^[:space:]*$/ {
 	next
 }
 

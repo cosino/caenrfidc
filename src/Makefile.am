@@ -20,10 +20,10 @@ noinst_HEADERS = client.h macros.h utils.h commands.h
 # Special targets
 
 commands.c : commands.def commands.h
-	awk -f def2c.awk $< > $@
+	$(AWK) -f def2c.awk $< > $@
 
 commands.h : commands.def
-	awk -f def2h.awk $< > $@
+	$(AWK) -f def2h.awk $< > $@
 
 clean-local :
 	rm -rf commands.c commands.h

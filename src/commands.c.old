@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+
+#include <caenrfid.h>
+#include "client.h"
+
+/*
+ * Misc commands
+ */
+
+int cmd_exit(struct command_s *cmd, int argc, char *argv[])
+{
+	PDEBUG("%s", __func__);
+
+	exit(EXIT_SUCCESS);
+}
+
+int cmd_info(struct command_s *cmd, int argc, char *argv[])
+{
+	PDEBUG("%s", __func__);
+
+        PDATA("%s - version %s", NAME, VERSION);
+
+	return 0;
+}
+
+int cmd_help(struct command_s *cmd, int argc, char *argv[])
+{
+	struct command_s *ptr;
+
+	PDEBUG("%s", __func__);
+
+       	PDATA("commands list:");
+	for (ptr = commands_list; ptr->name; ptr++)
+        	PDATA("\t%s %s", ptr->name, ptr->usage ? ptr->usage : "");
+
+	return 0;
+}
+
+/*
+ * Commands array
+ */
+
+#define stringify(s)		tostring(s)
+#define tostring(s)		#s
+#define command(_name, _usage)				\
+		{					\
+			.name	= stringify(_name),	\
+			.func	= cmd_##_name,		\
+			.usage	= _usage,		\
+		}
+
+struct command_s commands_list[] = {
+	/* Proper RFID commands */
+	command(radio,
+		"open <comm_proto> [options] | close <id>"),
+	command(get_fw_release,
+		"get_fw_release <id>"),
+	command(get_power,
+		"get_power <id>"),
+
+	/* Misc commands */
+	command(exit, NULL),
+	command(info, NULL),
+	command(help, NULL),
+
+	{ },			/* array terminator */
+};

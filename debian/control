@@ -1,0 +1,17 @@
+Source: caenrfidc
+Section: misc
+Priority: standard
+Maintainer: Rodolfo Giometti <giometti@linux.it>
+Build-Depends: debhelper (>= 7), git-core (>= 1:1.7.1-1), libcaenrfid-dev (>= 0.62.0)
+Standards-Version: 3.8.1
+Homepage: http://www.cosino.io
+
+Package: caenrfidc
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcaenrfid0 (>= 0.62.0)
+Description: the client side of CAENRFID protocol
+ This package implements the client side of CAENRFID protocol by providing
+ a command line program suitable for scripting.
+ .
+ You can get further info at http://support.caenrfid.it web site.

@@ -1,0 +1,40 @@
+This package was debianized by:
+
+    Rodolfo Giometti <giometti@linux.it> on Thu, 29 Apr 2010 14:11:35 +0100.
+
+It was downloaded from:
+
+    www.caenrfid.it/support/caenrfidc/
+
+Upstream Author(s):
+
+    Rodolfo Giometti <giometti@linux.it>
+
+Copyright:
+
+    Copyright (C) 2010 Rodolfo Giometti <giometti@linux.it>
+    Copyright (C) 2010 CAEN RFID <info@caenrfid.it>
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 2 of the License.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-2'.
+
+The Debian packaging is:
+
+    Copyright (C) 2010, Rodolfo Giometti <giometti@linux.it>
+
+and is licensed under the GPL, see above.

@@ -1,0 +1,20 @@
+# Define clients commands
+
+# name		usage (commands'name is auto-added)
+exit
+info
+help
+
+radio;		open (<comm_proto> [options] | close <id>)
+
+channel;	<id> (get | set <chan>)
+fw_release;	<id>
+inventory;	<id> <src>
+modulation;	<id> (get | set <proto>)
+power;		<id> (get | set <pow>)
+protocol;	<id> (get | set <proto>)
+regulation;	<id> (get | set <reg>)
+readpoint;	<id> <name> (add <ant> | rm <ant> | chk <ant>)
+read;		<id> <EPC> RES|EPC|TID|USR <offset> <#bytes> [<passwd>]
+
+#dump_regs;	<id> <ant>

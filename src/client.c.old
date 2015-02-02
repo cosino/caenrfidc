@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <string.h>
+
+#include <caenrfid.h>
+
+CAENRFIDHandle handle;
+CAENRFIDProtocol protocol;
+
+int main(int argc, char *argv[])
+{
+	char string[128];
+	int ret;
+
+	ret = CAENRFID_Init(RS232, NULL, &handle, &protocol);
+	if (ret != CAENRFID_StatusOK) {
+		printf("cannot init lib\n");
+		exit(-1);
+	}
+
+	ret = CAENRFID_GetFWRelease(handle, string);
+	if (ret != CAENRFID_StatusOK) {
+		printf("cannot get data\n");
+		exit(-1);
+	}
+
+	string[127] = '\0';
+	printf("FWRelease %s\n", string);
+
+	ret = CAENRFID_End(handle);
+	if (ret != CAENRFID_StatusOK) {
+		printf("improper lib closure\n");
+		exit(-1);
+	}
+printf("HUHUHU\n");
+
+	return 0;
+}

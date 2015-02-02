@@ -3,7 +3,7 @@
 # name		usage (commands'name is auto-added)
 exit
 info
-help
+help;		[<command>]
 
 radio;		open (<comm_proto> [options] | close <id>)
 

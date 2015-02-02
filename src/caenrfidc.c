@@ -82,7 +82,7 @@ static void usage(void)
 
 int main(int argc, char *argv[])
 {
-        char c;
+	int c;
         struct option long_options[] = {
                 { "help",       no_argument, 0, 'h' },
         };
